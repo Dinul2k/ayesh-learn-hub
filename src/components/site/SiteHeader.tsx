@@ -6,7 +6,7 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#videos", label: "Videos" },
   { href: "#tutes", label: "Tutes" },
-  { href: "#contact", label: "Contact" },
+  { href: "#classes", label: "Classes" },
 ];
 
 export function SiteHeader() {
