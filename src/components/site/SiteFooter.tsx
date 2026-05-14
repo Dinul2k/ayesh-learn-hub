@@ -31,13 +31,13 @@ export function SiteFooter() {
             <h4 className="text-sm font-semibold text-foreground">Get in touch</h4>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:ayeshrandil@gmail.com" className="inline-flex items-center gap-2 hover:text-primary">
-                  <Mail className="h-4 w-4" /> ayeshrandil@gmail.com
+                <a href="mailto:ayeshscience94@gmail.com" className="inline-flex items-center gap-2 hover:text-primary">
+                  <Mail className="h-4 w-4" /> ayeshscience94@gmail.com
                 </a>
               </li>
               <li>
                 <a href="https://wa.me/94766074338" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-primary">
-                  <MessageCircle className="h-4 w-4" /> 0766 074 338
+                  <MessageCircle className="h-4 w-4" /> 076 607 4338
                 </a>
               </li>
             </ul>
