@@ -11,11 +11,6 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
-  resolve: {
-    alias: {
-      "@": "/src",
-    },
-  },
   build: {
     outDir: "dist",
   }
