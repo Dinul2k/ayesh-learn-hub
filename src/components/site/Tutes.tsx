@@ -2,12 +2,12 @@ import { Download, FileText, Atom, FlaskConical, Leaf } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const tutes = [
-  { grade: "Grade 6", title: "Matter & Materials", pages: 18, subject: "General Science", icon: Atom, tone: "from-sky-500/15 to-indigo-500/15" },
-  { grade: "Grade 7", title: "Force, Motion & Energy", pages: 22, subject: "Physics", icon: Atom, tone: "from-cyan-500/15 to-blue-500/15" },
-  { grade: "Grade 8", title: "The Living World", pages: 24, subject: "Biology", icon: Leaf, tone: "from-emerald-500/15 to-teal-500/15" },
-  { grade: "Grade 9", title: "Atoms & Compounds", pages: 26, subject: "Chemistry", icon: FlaskConical, tone: "from-violet-500/15 to-fuchsia-500/15" },
-  { grade: "Grade 10", title: "Electricity & Magnetism", pages: 30, subject: "Physics", icon: Atom, tone: "from-amber-500/15 to-orange-500/15" },
-  { grade: "Grade 11", title: "Organic Chemistry Basics", pages: 28, subject: "Chemistry", icon: FlaskConical, tone: "from-rose-500/15 to-pink-500/15" },
+  { grade: "Grade 6", title: "Matter & Materials", pages: 18, subject: "General Science", icon: Atom, tone: "from-sky-500/15 to-indigo-500/15", link: "https://drive.google.com/drive/folders/1Hxmykcm6-j8fu-5S6igQOjW8XuZBtNnV" },
+  { grade: "Grade 7", title: "Force, Motion & Energy", pages: 22, subject: "Physics", icon: Atom, tone: "from-cyan-500/15 to-blue-500/15", link: "https://drive.google.com/drive/folders/1UUsCJ6fdaVyTVaMKQ6QaL2s4doYEZXUm" },
+  { grade: "Grade 8", title: "The Living World", pages: 24, subject: "Biology", icon: Leaf, tone: "from-emerald-500/15 to-teal-500/15", link: "https://drive.google.com/drive/folders/1KQmDWwgqmMpL-LuY4MTS7oPNUYASb35H" },
+  { grade: "Grade 9", title: "Atoms & Compounds", pages: 26, subject: "Chemistry", icon: FlaskConical, tone: "from-violet-500/15 to-fuchsia-500/15" , link: "https://drive.google.com/drive/folders/1Lo2nIm8AfiDpiQ_UqJ-prlttmZ38RGwO" },
+  { grade: "Grade 10", title: "Electricity & Magnetism", pages: 30, subject: "Physics", icon: Atom, tone: "from-amber-500/15 to-orange-500/15" ,  link: "https://drive.google.com/drive/folders/10VoJQjme8-XcN7vav4WQS_bxsGAw8md-"  },
+  { grade: "Grade 11", title: "Organic Chemistry Basics", pages: 28, subject: "Chemistry", icon: FlaskConical, tone: "from-rose-500/15 to-pink-500/15" , link: "https://drive.google.com/drive/folders/1OoPL0-f3ZO4LGN8gq8IFpChNp31tJSH3" },
 ];
 
 export function Tutes() {
@@ -21,10 +21,12 @@ export function Tutes() {
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {tutes.map(({ icon: Icon, ...t }) => (
+          {tutes.map(({ icon: Icon, link, ...t }) => (
             <a
               key={t.title}
-              href="#"
+              href={link || "#"}
+              target={link ? "_blank" : undefined}
+              rel={link ? "noopener noreferrer" : undefined}
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]"
             >
               <div className={`absolute inset-x-0 top-0 h-32 bg-gradient-to-br ${t.tone} opacity-70`} />
